@@ -1,0 +1,24 @@
+<div class="container">
+
+<%= link_to "Edit the task", edit_task_path %>
+<%= link_to "Delete #{@task.title}",
+            task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+
+<h1>
+<%= @task.title %>
+</h1>
+
+<p>
+<%= @task.details %>
+</p>
+
+<p>
+This task is not complited yet
+</p>
+
+
+<%= link_to "Back to list", tasks_path %>
+
+</div>
